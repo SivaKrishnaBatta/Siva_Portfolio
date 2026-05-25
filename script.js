@@ -2,7 +2,7 @@
 EXPERIENCE AUTO UPDATE
 =============================== */
 
-const startDate = new Date("2023-11-01")  // Nov 2023
+const startDate = new Date("2023-06-01")  // June 2023
 
 function updateExperience(){
 
