@@ -4,19 +4,19 @@ EXPERIENCE AUTO UPDATE
 
 const startDate = new Date("2023-06-01")  // June 2023
 
-function updateExperience(){
+function updateExperience() {
 
-const now = new Date()
+    const now = new Date()
 
-let months =
-(now.getFullYear() - startDate.getFullYear()) * 12 +
-(now.getMonth() - startDate.getMonth())
+    let months =
+        (now.getFullYear() - startDate.getFullYear()) * 12 +
+        (now.getMonth() - startDate.getMonth())
 
-let years = Math.floor(months / 12)
-let remainingMonths = months % 12
+    let years = Math.floor(months / 12)
+    let remainingMonths = months % 12
 
-document.getElementById("experience").innerText =
-years + "." + remainingMonths
+    document.getElementById("experience").innerText =
+        years + "." + remainingMonths
 
 }
 
@@ -28,12 +28,12 @@ GLASS CARD 3D MOUSE EFFECT
 
 const card = document.querySelector(".glass-card")
 
-document.addEventListener("mousemove",(e)=>{
+document.addEventListener("mousemove", (e) => {
 
-let x = (window.innerWidth / 2 - e.clientX) / 60
-let y = (window.innerHeight / 2 - e.clientY) / 60
+    let x = (window.innerWidth / 2 - e.clientX) / 60
+    let y = (window.innerHeight / 2 - e.clientY) / 60
 
-card.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`
+    card.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`
 
 })
 
@@ -41,15 +41,15 @@ card.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`
 GLASS MORPHISM MOUSE LIGHT
 =============================== */
 
-card.addEventListener("mousemove",(e)=>{
+card.addEventListener("mousemove", (e) => {
 
-const rect = card.getBoundingClientRect()
+    const rect = card.getBoundingClientRect()
 
-const x = e.clientX - rect.left
-const y = e.clientY - rect.top
+    const x = e.clientX - rect.left
+    const y = e.clientY - rect.top
 
-card.style.setProperty("--x", x + "px")
-card.style.setProperty("--y", y + "px")
+    card.style.setProperty("--x", x + "px")
+    card.style.setProperty("--y", y + "px")
 
 })
 
@@ -59,21 +59,21 @@ SCROLL REVEAL ANIMATION
 
 const reveals = document.querySelectorAll(".about-section, .skills-section, .projects-section")
 
-function revealSections(){
+function revealSections() {
 
-reveals.forEach(section => {
+    reveals.forEach(section => {
 
-const top = section.getBoundingClientRect().top
-const windowHeight = window.innerHeight
+        const top = section.getBoundingClientRect().top
+        const windowHeight = window.innerHeight
 
-if(top < windowHeight - 120){
+        if (top < windowHeight - 120) {
 
-section.style.opacity = "1"
-section.style.transform = "translateY(0px)"
+            section.style.opacity = "1"
+            section.style.transform = "translateY(0px)"
 
-}
+        }
 
-})
+    })
 
 }
 
@@ -85,9 +85,9 @@ INITIAL ANIMATION SETUP
 
 reveals.forEach(section => {
 
-section.style.opacity = "0"
-section.style.transform = "translateY(80px)"
-section.style.transition = "all 0.8s ease"
+    section.style.opacity = "0"
+    section.style.transform = "translateY(80px)"
+    section.style.transition = "all 0.8s ease"
 
 })
 
